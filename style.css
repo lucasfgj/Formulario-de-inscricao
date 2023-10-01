@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+body{
+    background-color: var(--Charcoal-Grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    width: 810px;
+    height: 560px;
+    display: flex;
+    background-color:var(--White);
+    border-radius: 35px;
+    position: relative;
+    top: 20vh;
+}
+.valid{
+    display: none;
+}
+.div1 , .div2{
+    width: 405px;
+    height: 560px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.attribution {
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    bottom: -22vh;
+}
+.part1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+}
+.part1 h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--Dark-Slate-Grey);
+}
+.part1 p{
+    width: 360px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--Dark-Slate-Grey);
+}
+ul>li{
+    display: flex;
+    list-style: none;
+    width: 360px;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--Charcoal-Grey);
+}
+form{
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 360px;
+    gap: 10px;
+}
+form label{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+form #email{
+    font-size: 15px;
+    width: 360px;
+    height: 50px;
+    padding: 12px;
+    color: var(--Grey);
+    border-radius: 8px;
+    border: 0.6px solid;
+    margin-bottom: 15px;
+}
+.invalid{
+    border: 2px solid #ff0000;
+}
+.botao{
+    height: 50px;
+    border-radius: 8px;
+    border: 0.5px solid;
+    color: var(--White);
+    background-color: var(--Dark-Slate-Grey);
+}
+form label span{
+    color: #ff0000;
+    font-size: 12px;
+    position: relative;
+    left: 150px;
+    opacity: 0;
+}
+.part2{
+    width: 380px;
+    height: 520px;
+    background-image: url(/Frontend-Mentor/Desafio-4/newsletter-sign-up-with-success-message-main/assets/images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.valido{
+    width: 450px;
+    height: 450px;
+    background-color: var(--White);
+    border-radius: 20px;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: 20vh;
+}
+.valido div{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 330px;
+    margin: 0 auto;
+    gap: 30px;
+}
+.valido div h1{
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--Dark-Slate-Grey);
+    
+}
+.valido div p{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--Dark-Slate-Grey);
+    font-weight: 400;
+    line-height: 22px;
+}
+.valido div p span{
+    font-weight: 700;
+}
+.valido div button{
+    width: 300px;
+    height: 45px;
+    border-radius: 10px;
+    border: 0.5px solid;
+    color: var(--White);
+    background-color: var(--Dark-Slate-Grey);
+}
+@media(max-width: 850px){
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        height: 1000px;
+        width: 400px;
+        top: 0;
+        border-radius: 15px;
+    }
+    .div1, .div2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+}
+@media(max-width: 600px){
+    .div2{
+        height: 290px;
+    }
+    .div1{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .part2{
+        background-image: url(/Frontend-Mentor/Desafio-4/newsletter-sign-up-with-success-message-main/assets/images/illustration-sign-up-mobile.svg);
+        height: 288px;
+        border-radius: 25px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        height: 840px;
+        width: 100%;
+        top: 0;
+        border-radius: 15px;
+        gap: 35px;
+    }
+    .attribution {
+        font-size: 14px;
+        text-align: center;
+        position: relative;
+        bottom: -2vh;
+    }
+    .valido div button{
+        position: relative;
+        bottom: -145px;
+    }
+    
+}
+@media(max-width: 450px){
+    .container{
+        width: 100vw;
+        height: 800px; 
+    }
+    .div2, .part2{
+        width: 100vw;
+        height: 270px;
+    }
+    .part1{
+        width: 350px;
+    }
+    .valido{
+        position: relative;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    .valido div button{
+        position: relative;
+        bottom: -145px;
+    }
+}
+@media(max-width: 380px){
+    .container{
+       width: 100vw;
+       height: 800px; 
+    }
+    .div2, .part2{
+        width: 100vw;
+        height: 270px;
+    }
+    .part1{
+        width: 350px;
+    }
+    .part1 p, ul>li{
+        width: 330px;
+    }
+    
+    form #email, .botao{
+        width: 320px;
+        margin: 0 auto;
+        position: relative;
+        left: 15px;
+    }
+    form label{
+        position: relative;
+        left: 10px;
+    }
+    form label span{
+        left: 128px;
+    }
+    .valido{
+        position: relative;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    .valido div button{
+        position: relative;
+        bottom: -145px;
+    }
+}
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  <section class="container">
+    <div class="div1" >
+      <div class="part1">
+        <h1> Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/><path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/></g></svg>Product discovery and building what matters</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/><path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/></g></svg>Measuring to ensure updates are a success</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/><path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/></g></svg>And much more!</li>
+        </ul>
+        <form id="form" action="">
+          <label>Email address <span id="valid">Valid email required</span></label>
+          <input type="text" id="email" placeholder="email@company.com">
+          <input type="button" class="botao" id="enviar" value="Subscribe to monthly newsletter" onclick="sendForm()">
+        </form>
+      </div>
+    </div>
+    <div class="div2" >
+      <div class="part2">
+      </div>
+    </div>
+  </section>
+  <section class="valido">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><defs><linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FF6A3A"/><stop offset="100%" stop-color="#FF527B"/></linearGradient></defs><g fill="none"><circle cx="32" cy="32" r="32" fill="url(#a)"/><path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285"/></g></svg>
+      <h1>Thanks for subscribing!</h1>
+    <p>
+      A confirmation email has been sent to <span id="emailTxt">ash@loremcompany.com</span>. 
+      Please open it and click the button inside to confirm your subscription.
+    </p>
+    <button>Dismiss message</button>
+    </div>
+  </section>
+   
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/lucasfgj">Lucas F. Gabriel</a>.
+  </div>
+  
+  <script>
+    const sec1 = document.querySelector('.valido');
+    const sec2 = document.querySelector('.container');
+
+    function sendForm(){
+      let span = document.querySelector("#valid");
+      let span2 = document.querySelector('#emailTxt');
+      const email = document.querySelector("#email");
+      const value = email.value;
+      const btn = document.querySelector("enviar");
+      const emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i; // o fará a verificação de emails com (.COM.BR) ex(fulano2023@email.com.br)
+      const emailRegex2 =  /^[a-z0-9.]+@[a-z0-9]+\.([a-z]+)?$/i; // o fará a verificação de emails somente com (.COM) ex(fulano2023@email.com)
+
+      if(emailRegex.test(value) || emailRegex2.test(value)){
+        console.log(value);
+        sec2.style = "display: none";
+        sec1.style = "display: flex;";
+        span2.innerHTML = `${value}`
+      }else{
+        span.style = "opacity: 1;"
+        email.style = "border: 2px solid #ff0000; background-color: #efa4a4";
+      }
+
+    }
+    const botao = document.querySelector('button');
+    botao.addEventListener("click", function(){
+      sec2.style = "display: flex";
+      sec1.style = "display: none";
+    }) 
+    
+
+  </script>
+</body>
+</html>
