@@ -117,7 +117,7 @@ form label span{
 .part2{
     width: 380px;
     height: 520px;
-    background-image: url(/Frontend-Mentor/Desafio-4/newsletter-sign-up-with-success-message-main/assets/images/illustration-sign-up-desktop.svg);
+    background-image: url(./images/illustration-sign-up-desktop.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -191,7 +191,7 @@ form label span{
         align-items: flex-start;
     }
     .part2{
-        background-image: url(/Frontend-Mentor/Desafio-4/newsletter-sign-up-with-success-message-main/assets/images/illustration-sign-up-mobile.svg);
+        background-image: url(./images/illustration-sign-up-mobile.svg);
         height: 288px;
         border-radius: 25px;
     }
