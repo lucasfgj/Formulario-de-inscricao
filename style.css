@@ -240,6 +240,33 @@ form label span{
         bottom: -145px;
     }
 }
+@media(max-width: 415px){
+    .container{
+        width: 100vw;
+        height: 800px; 
+    }
+    .div2{
+        width: 100vw;
+        height: 270px;
+    }
+    .part2{
+        width: 100vw;
+        height: 316px;
+    }
+    .part1{
+        width: 350px;
+    }
+    .valido{
+        position: relative;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    .valido div button{
+        position: relative;
+        bottom: -145px;
+    }
+}
 @media(max-width: 380px){
     .container{
        width: 100vw;
