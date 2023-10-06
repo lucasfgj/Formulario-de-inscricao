@@ -217,8 +217,9 @@ form label span{
         align-items: flex-start;
     }
     .part2{
+        width: 100%;
         background-image: url(./images/illustration-sign-up-mobile.svg);
-        height: 288px;
+        height: 306px;
         border-radius: 25px;
     }
     .container{
@@ -226,7 +227,6 @@ form label span{
         flex-direction: column-reverse;
         align-items: center;
         height: 840px;
-        width: 100%;
         top: 0;
         border-radius: 15px;
         gap: 35px;
@@ -248,7 +248,13 @@ form label span{
         width: 100vw;
         height: 800px; 
     }
-    .div2, .part2{
+    .part2{
+        width: 100%;
+        background-image: url(./images/illustration-sign-up-mobile.svg);
+        height: 333px;
+        border-radius: 25px;
+    }
+    .div2{
         width: 100vw;
         height: 270px;
     }
