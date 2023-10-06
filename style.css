@@ -186,8 +186,8 @@ form label span{
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        height: 1000px;
-        width: 400px;
+        height: 860px;
+        width: 100vw;
         top: 0;
         border-radius: 15px;
     }
@@ -209,6 +209,7 @@ form label span{
 }
 @media(max-width: 600px){
     .div2{
+        width: 100%;
         height: 290px;
     }
     .div1{
@@ -219,6 +220,7 @@ form label span{
     .part2{
         width: 100%;
         background-image: url(./images/illustration-sign-up-mobile.svg);
+        background-size: cover;
         height: 306px;
         border-radius: 25px;
     }
@@ -226,6 +228,7 @@ form label span{
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
+        width: 100vw;
         height: 840px;
         top: 0;
         border-radius: 15px;
@@ -235,7 +238,7 @@ form label span{
         font-size: 14px;
         text-align: center;
         position: relative;
-        bottom: -2vh;
+        bottom: -5vh;
     }
     .valido div button{
         position: relative;
